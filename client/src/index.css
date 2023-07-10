@@ -1,0 +1,49 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+body {
+  background: #459e96;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background: #c1da04;
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #333;
+  text-decoration: none;
+}
+
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+  background-image: url("https://rare-gallery.com/uploads/posts/565916-lifting-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.App {
+  background-image: url("https://rare-gallery.com/uploads/posts/565916-lifting-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
