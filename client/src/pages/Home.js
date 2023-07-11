@@ -8,7 +8,7 @@ import "../components/design.css";
 
 const Home = () => {
     const { workouts, dispatch } = useWorkoutsContext()
-    
+
     useEffect(() => {
         const fetchWorkouts = async () => {
 
@@ -17,7 +17,7 @@ const Home = () => {
             if (response.data) {
                 dispatch({ type: 'SET_WORKOUTS', payload: response.data });
             }
-            else{
+            else {
 
             }
 

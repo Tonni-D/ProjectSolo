@@ -9,13 +9,13 @@ export const workoutsReducer = (state = { workouts: [] }, action) => {
                 ...state,
                 workouts: action.payload,
             }
-            case 'UPDATE_WORKOUT':
-                return {
-                  ...state,
-                  workouts: state.workouts.map(workout =>
+        case 'UPDATE_WORKOUT':
+            return {
+                ...state,
+                workouts: state.workouts.map(workout =>
                     workout._id === action.payload._id ? action.payload : workout
-                  )
-                }
+                )
+            }
         case 'CREATE_WORKOUT':
             return {
                 ...state,

@@ -1,6 +1,10 @@
 .App {
+    height: 800px;
     background-image: url("565916-lifting-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 0%;
+    align-items:center;
+    display: grid;
   }
   

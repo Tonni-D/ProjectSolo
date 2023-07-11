@@ -8,27 +8,31 @@
 }
 
 body {
-  background: #459e96;
+  background: #000000;
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
 
 header {
-  background: #c1da04;
+  background: #000000;
+  margin: 0px;
 }
 
 header .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 }
 
 header a {
-  color: #333;
-  text-decoration: none;
+  color: #eef200;
+  text-decoration:none;
+  font-size: 200px;
+  font-family:Arial, Helvetica, sans-serif
 }
 
 .pages {
@@ -38,6 +42,8 @@ header a {
   background-image: url("https://rare-gallery.com/uploads/posts/565916-lifting-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  align-items: center;
+  color: white ;
 }
 
 

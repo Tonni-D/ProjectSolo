@@ -9,12 +9,12 @@ const workoutSchema = new Schema({
     },
     reps: {
         type: Number,
-        min:[0,"This needs to be bigger than 0"],
+        min: [0, "This needs to be bigger than 0"],
         required: true
     },
     load: {
         type: Number,
-        min:[0,"This needs to be bigger than 0"],       
+        min: [0, "This needs to be bigger than 0"],
         required: true
     }
 }, { timestamps: true })

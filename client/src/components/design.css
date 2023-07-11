@@ -1,23 +1,27 @@
 .workout-details {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    border: none;
+    color: rgb(255, 255, 255);
     border-radius: 8px;
+    border-color: #cecbcb;
     overflow: hidden;
     margin-bottom: 20px;
+    background-color: #1b2726;
+    width: 400px;
+    margin-top: 20px;
+
   }
   
   .card-title {
-    color: #333;
-    font-size: 20px;
+    color:yellow;
+    font-size: 25px;
     margin-bottom: 5px;
   }
   
   .card-text strong {
-    font-weight: bold;
-  }
+    font-weight:normal  }
   
   .workout-created-at {
-    color: #777;
+    color: #fffdfd;
     font-size: 14px;
     margin-top: 10px;
   }
@@ -40,7 +44,7 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #000000;
   }
   
   .form-group {
@@ -70,5 +74,4 @@
     border-color: #0062cc;
   }
   
-
   

@@ -3,34 +3,34 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext';
 const Edit = () => {
-  const { id } = useParams(); 
+  const { id } = useParams();
   const { dispatch } = useWorkoutsContext()
   const [title, setTitle] = useState('');
   const [load, setLoad] = useState('');
   const [reps, setReps] = useState('');
   const [error, setError] = useState(null);
   const [emptyFields, setEmptyFields] = useState([]);
-  const navigate=useNavigate()
-  const [err,setErr]=useState([])
+  const navigate = useNavigate()
+  const [err, setErr] = useState([])
 
-  const handleSubmit =  (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const workout = { title, load, reps };
     axios.patch(`http://localhost:4000/api/workouts/${id}`, workout)
-    .then((response) => {
-      setEmptyFields([]);
-      setError(null);
-      setTitle('');
-      setLoad('');
-      setReps('');
-      dispatch({ type: 'UPDATE_WORKOUT', payload: response.data });
-      navigate("/");
-    })
-    .catch((error) => {
-      console.log("An error occurred:", error);
-      setError(error.response.data.error);
-    });
-  
+      .then((response) => {
+        setEmptyFields([]);
+        setError(null);
+        setTitle('');
+        setLoad('');
+        setReps('');
+        dispatch({ type: 'UPDATE_WORKOUT', payload: response.data });
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log("An error occurred:", error);
+        setError(error.response.data.error);
+      });
+
   }
 
 
@@ -47,7 +47,7 @@ const Edit = () => {
           value={title}
           className={`form-control `}
         />
-       {error && Array.isArray(error.emptyFields) && error.emptyFields.includes("title") ? <span style={{ color: "red" }}>{error.error}</span> : ""}
+        {error && Array.isArray(error.emptyFields) && error.emptyFields.includes("title") ? <span style={{ color: "red" }}>{error.error}</span> : ""}
 
       </div>
 
@@ -61,7 +61,7 @@ const Edit = () => {
           value={load}
           className={`form-control`}
         />
-      {error && Array.isArray(error.emptyFields) && error.emptyFields.includes("load") ? <span style={{ color: "red" }}>{error.error}</span> : ""}
+        {error && Array.isArray(error.emptyFields) && error.emptyFields.includes("load") ? <span style={{ color: "red" }}>{error.error}</span> : ""}
       </div>
 
       <div className="form-group">
@@ -73,7 +73,7 @@ const Edit = () => {
           value={reps}
           className={`form-control `}
         />
-    {error && Array.isArray(error.emptyFields) && error.emptyFields.includes("reps") ? <span style={{ color: "red" }}>{error.error}</span> : ""}
+        {error && Array.isArray(error.emptyFields) && error.emptyFields.includes("reps") ? <span style={{ color: "red" }}>{error.error}</span> : ""}
       </div>
 
       <button className="btn btn-primary">Save Changes</button>
